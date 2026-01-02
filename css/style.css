@@ -1,0 +1,314 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family:
+    "Google Sans",
+    "Inter",
+    "Roboto",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: #fff;
+}
+
+/* ================= VIDEO BACKGROUND ================= */
+.video-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+  transform: scale(1.06);
+}
+
+.video-bg .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* ================= CENTER CONTENT ================= */
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= MAIN GLASS CARD ================= */
+.profile-card.large {
+  width: 420px;
+  padding: 26px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.065),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    0 22px 60px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card.large::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.16),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+/* ================= TOP PROFILE ================= */
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.22);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.status {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.65;
+}
+
+/* ================= BADGE ================= */
+.badge {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c5cff, #00e0ff);
+  box-shadow: 0 0 6px rgba(124, 92, 255, 0.6);
+  position: relative;
+}
+
+.badge::after {
+  content: "✔";
+  font-size: 10px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+/* ================= DIVIDER ================= */
+.divider {
+  margin: 20px 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.26),
+    transparent
+  );
+}
+
+/* ================= BOTTOM DISCORD LINKS ================= */
+.profile-bottom {
+  display: flex;
+  gap: 12px;
+}
+
+.discord-box {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.015)
+  );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  text-decoration: none;
+  color: #fff;
+
+  transition: transform 0.25s ease;
+}
+
+.discord-box:hover {
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.label {
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ================= SOCIAL ICONS ================= */
+.social-links {
+  margin-top: 26px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.social-icon i {
+  font-size: 20px;
+  background: linear-gradient(180deg, #ffffff, #c7cbd1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .profile-card.large {
+    width: 92%;
+    max-width: 380px;
+    padding: 22px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .content {
+    padding: 20px 14px;
+  }
+
+  .profile-card.large {
+    width: 100%;
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .profile-bottom {
+    flex-direction: column;
+  }
+
+  .avatar {
+    width: 56px;
+    height: 56px;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .status {
+    font-size: 12px;
+  }
+
+  .social-links {
+    gap: 14px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icon i {
+    font-size: 18px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+  .username {
+    font-size: 16px;
+  }
+
+  .value {
+    font-size: 13px;
+  }
+}

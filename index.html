@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+
+    <!-- Meta Performance & SEO -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal landing page">
+
+    <!-- Google Fonts (optimized) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= VIDEO BACKGROUND ================= -->
+    <div class="video-bg">
+        <video autoplay muted loop playsinline preload="metadata">
+            <source src="asset/bg.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- ================= BACKGROUND MUSIC ================= -->
+    <audio id="bg-music" loop preload="none">
+        <source src="asset/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ================= CONTENT ================= -->
+    <div class="content">
+
+        <!-- MAIN PROFILE CARD -->
+        <div class="profile-card large">
+
+            <!-- TOP PROFILE -->
+            <div class="profile-top">
+                <img
+                    src="asset/avatar.png"
+                    alt="Avatar"
+                    class="avatar"
+                    loading="lazy"
+                >
+
+                <div class="profile-info">
+                    <h2 class="username">
+                        Rezaa
+                        <span class="badge"></span>
+                    </h2>
+                    <p class="status">last seen 1 hour ago</p>
+                </div>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="divider"></div>
+
+            <!-- BOTTOM DISCORD LINKS -->
+            <div class="profile-bottom">
+
+                <!-- Discord Profile -->
+                <a
+                    href="https://discord.com/users/itsyowzaa"
+                    target="_blank"
+                    rel="noopener"
+                    class="discord-box"
+                >
+                    <span class="icon">👤</span>
+                    <div>
+                        <p class="label">Discord</p>
+                        <p class="value">@itsyowzaa</p>
+                    </div>
+                </a>
+
+                <!-- Discord Server -->
+                <a
+                    href="https://discord.gg/W3PxBnx6g3"
+                    target="_blank"
+                    rel="noopener"
+                    class="discord-box"
+                >
+                    <span class="icon">🌐</span>
+                    <div>
+                        <p class="label">Server</p>
+                        <p class="value">Join Server</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- ================= SOCIAL ICONS ================= -->
+        <div class="social-links">
+
+            <a href="https://github.com/rezadesky" target="_blank" rel="noopener" class="social-icon">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@USERNAME" target="_blank" rel="noopener" class="social-icon">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://steamcommunity.com/id/USERNAME" target="_blank" rel="noopener" class="social-icon">
+                <i class="fa-brands fa-steam"></i>
+            </a>
+
+            <a href="https://www.riotgames.com" target="_blank" rel="noopener" class="social-icon">
+                <i class="fa-solid fa-fist-raised"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
